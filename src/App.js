@@ -1,6 +1,7 @@
 import styled, { createGlobalStyle } from "styled-components";
 import BannerSection from "./components/BannerSection";
 import Header from "./components/Header";
+import HotKeyword from "./components/HotKeyword";
 import TopSection from "./components/TopSection";
 
 // css 초기화
@@ -86,6 +87,7 @@ function App() {
       <Header />
       <TopSection />
       <BannerSection />
+      <HotKeyword />
     </Container>
   );
 }

@@ -120,10 +120,12 @@ const Header = () => {
       <div className="section_area">
         <div className="header_upper">
           <div className="logo_box">
-            <img
-              src="https://janet.co.kr/html_demo/img/common/logo.png"
-              alt="자넷 로고"
-            />
+            <a href="/">
+              <img
+                src="https://janet.co.kr/html_demo/img/common/logo.png"
+                alt="자넷 로고"
+              />
+            </a>
           </div>
           <div className="login_box">
             <div className="login_btn">
