@@ -1,6 +1,8 @@
 import styled, { createGlobalStyle } from "styled-components";
 import Header from "./components/Header";
+import TopSection from "./components/TopSection";
 
+// css 초기화
 const GlobalStyle = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -18,8 +20,6 @@ time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -56,7 +56,6 @@ table {
 
 body {
   font-weight:300 ;
-  font-family: 'Source Sans Pro', sans-serif;
   font-size: 12px;
   font-family: 'malgun gothic', 'dotum', sans-serif;
   line-height: 1.2;
@@ -65,6 +64,10 @@ body {
 a {
   text-decoration: none;
   color:inherit;
+}
+
+p {
+  font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
 }
 `;
 
@@ -81,6 +84,7 @@ function App() {
     <Container>
       <GlobalStyle />
       <Header />
+      <TopSection />
     </Container>
   );
 }
