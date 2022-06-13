@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
+import BannerSection from "./components/BannerSection";
 import Header from "./components/Header";
 import TopSection from "./components/TopSection";
 
@@ -74,7 +75,6 @@ p {
 const Container = styled.div`
   .section_area {
     width: 1250px;
-    /* width: 70%; */
     margin: auto;
   }
 `;
@@ -85,6 +85,7 @@ function App() {
       <GlobalStyle />
       <Header />
       <TopSection />
+      <BannerSection />
     </Container>
   );
 }

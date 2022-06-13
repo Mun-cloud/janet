@@ -6,11 +6,6 @@ const HeaderSection = styled.section`
   border-bottom: 1px solid #dfdfdf;
   font-weight: bold;
 
-  /* .section_area {
-        display: flex;
-        flex-direction: column;
-    } */
-
   .header_upper {
     padding-top: 18px;
     display: flex;
