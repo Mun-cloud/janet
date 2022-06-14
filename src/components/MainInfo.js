@@ -54,6 +54,28 @@ const MainInfoBox = styled.div`
     left: 53px;
     bottom: 15px;
   }
+
+  .swiper_btn {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #dfdfdf;
+    color: #8e8cfd;
+    font-size: 0.9em;
+    left: auto;
+    top: 40px;
+    cursor: pointer;
+  }
+
+  .swiper_left {
+    right: calc(19px + 30px);
+  }
+  .swiper_right {
+    right: calc(0px + 30px);
+  }
 `;
 
 const MainInfo = () => {
@@ -138,6 +160,13 @@ const MainInfo = () => {
       <a className="infobox_img" href="javascript:" tabindex="0">
         <img src="https://janet.co.kr/data/ebslider/eb4_basic/img/d0942d969f0a37cb73a46db345ea874b.png" />
       </a>
+
+      <div className="swiper_btn swiper_left">
+        <i class="fa fa-chevron-left"></i>
+      </div>
+      <div className="swiper_btn swiper_right">
+        <i class="fa fa-chevron-right"></i>
+      </div>
     </MainInfoBox>
   );
 };

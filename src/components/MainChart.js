@@ -36,13 +36,15 @@ const MainChartBox = styled.div`
     position: absolute;
     width: 19px;
     height: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #dfdfdf;
     color: #8e8cfd;
     font-size: 0.9em;
-    text-align: center;
-    right: 0;
     left: auto;
     top: 40px;
+    cursor: pointer;
   }
 
   .swiper_left {
@@ -99,8 +101,12 @@ const MainChart = () => {
           <span className="chartText">있잖아.........…</span>
         </li>
       </ul>
-      <div className="swiper_btn swiper_left"></div>
-      <div className="swiper_btn swiper_right"></div>
+      <div className="swiper_btn swiper_left">
+        <i class="fa fa-chevron-left"></i>
+      </div>
+      <div className="swiper_btn swiper_right">
+        <i class="fa fa-chevron-right"></i>
+      </div>
     </MainChartBox>
   );
 };
