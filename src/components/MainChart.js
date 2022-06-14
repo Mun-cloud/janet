@@ -5,6 +5,7 @@ const MainChartBox = styled.div`
   height: 100%;
   background: #fff;
   padding: 40px 30px 35px;
+  position: relative;
 
   > h1 {
     font-family: "noto sans kr";
@@ -29,6 +30,26 @@ const MainChartBox = styled.div`
         text-align: center;
       }
     }
+  }
+
+  .swiper_btn {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    border: 1px solid #dfdfdf;
+    color: #8e8cfd;
+    font-size: 0.9em;
+    text-align: center;
+    right: 0;
+    left: auto;
+    top: 40px;
+  }
+
+  .swiper_left {
+    right: calc(19px + 30px);
+  }
+  .swiper_right {
+    right: calc(0px + 30px);
   }
 `;
 
@@ -78,6 +99,8 @@ const MainChart = () => {
           <span className="chartText">있잖아.........…</span>
         </li>
       </ul>
+      <div className="swiper_btn swiper_left"></div>
+      <div className="swiper_btn swiper_right"></div>
     </MainChartBox>
   );
 };

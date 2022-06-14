@@ -17,18 +17,57 @@ const HeaderSection = styled.section`
     display: flex;
     align-items: center;
     justify-content: right;
-  }
 
-  .login_btn {
-    height: 42px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    line-height: 1.5;
-    color: #919191;
-    font-size: 14px;
-    margin-right: 20px;
+    .login_btn {
+      height: 47px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      line-height: 1.5;
+      color: #919191;
+      font-size: 14px;
+      margin-right: 20px;
+
+      .login_icon {
+        width: 100%;
+        height: 100%;
+      }
+
+      &:hover {
+        color: ${(props) => props.theme.purple};
+      }
+      &:nth-child(1) {
+        .login_icon {
+          background: url("https://janet.co.kr/img/common/header/member.png")
+            no-repeat center top;
+        }
+        &:hover .login_icon {
+          background: url("https://janet.co.kr/img/common/header/member_ov.png")
+            no-repeat center top;
+        }
+      }
+      &:nth-child(2) {
+        .login_icon {
+          background: url("https://janet.co.kr/img/common/header/login.png")
+            no-repeat center top;
+        }
+        &:hover .login_icon {
+          background: url("https://janet.co.kr/img/common/header/login_ov.png")
+            no-repeat center top;
+        }
+      }
+      &:nth-child(3) {
+        .login_icon {
+          background: url("https://janet.co.kr/img/common/header/company.png")
+            no-repeat center top;
+        }
+        &:hover .login_icon {
+          background: url("https://janet.co.kr/img/common/header/company_ov.png")
+            no-repeat center top;
+        }
+      }
+    }
   }
 
   .header_lower {
@@ -37,7 +76,7 @@ const HeaderSection = styled.section`
     justify-content: space-between;
 
     .header_lower_left {
-      margin-top: 15px;
+      margin-top: 10px;
       display: flex;
       align-items: center;
 
@@ -113,7 +152,6 @@ const HeaderSection = styled.section`
     }
   }
 `;
-
 const Header = () => {
   return (
     <HeaderSection>
@@ -129,29 +167,22 @@ const Header = () => {
           </div>
           <div className="login_box">
             <div className="login_btn">
-              <img
-                src="https://janet.co.kr/img/common/header/member.png"
-                //   src="https://janet.co.kr/img/common/header/member_ov.png"
-                alt="회원가입"
-              />
-              <span>회원가입</span>
-            </div>
-
-            <div className="login_btn">
-              <img
-                src="https://janet.co.kr/img/common/header/login.png"
-                //   src="https://janet.co.kr/img/common/header/login_ov.png"
-                alt="로그인"
-              />
-              <span>로그인</span>
+              <a href="/">
+                <div className="login_icon"></div>
+                <span>회원가입</span>
+              </a>
             </div>
             <div className="login_btn">
-              <img
-                src="https://janet.co.kr/img/common/header/company.png"
-                //   src="https://janet.co.kr/img/common/header/company_ov.png"
-                alt="기업서비스"
-              />
-              <span>기업서비스</span>
+              <a href="/">
+                <div className="login_icon"></div>
+                <span>로그인</span>
+              </a>
+            </div>
+            <div className="login_btn">
+              <a href="/">
+                <div className="login_icon"></div>
+                <span>기업서비스</span>
+              </a>
             </div>
           </div>
         </div>

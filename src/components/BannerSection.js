@@ -40,6 +40,33 @@ const MainBanner = styled.section`
   }
 `;
 
+const swiperJson = [
+  {
+    src: "https://janet.co.kr/html_demo/img/main/MainBn_scroll_01.png",
+    alt: "한 달만에 취득 가능한 자격증 BEST",
+  },
+  {
+    src: "https://janet.co.kr/html_demo/img/main/MainBn_scroll_02.png",
+    alt: "자격증 따기전에 알아둬야 할 것, 내게 꼭 필요한 자격증따기",
+  },
+  {
+    src: "https://janet.co.kr/html_demo/img/main/MainBn_scroll_03.png",
+    alt: "가장 따기 쉬운 자격증",
+  },
+  {
+    src: "https://janet.co.kr/html_demo/img/main/MainBn_scroll_04.png",
+    alt: "시험 없이 취득가능한 자격증",
+  },
+  {
+    src: "https://janet.co.kr/html_demo/img/main/MainBn_scroll_05.png",
+    alt: "월 300이상 버는 자격증이 있다?",
+  },
+  {
+    src: "https://janet.co.kr/html_demo/img/main/MainBn_scroll_06.png",
+    alt: "한 달만에 취득 가능한 자격증 BEST",
+  },
+];
+
 const BannerSection = () => {
   return (
     <MainBanner>
@@ -52,42 +79,11 @@ const BannerSection = () => {
         centeredSlides={true}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <img
-            src="https://janet.co.kr/html_demo/img/main/MainBn_scroll_01.png"
-            alt="한 달만에 취득 가능한 자격증 BEST"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://janet.co.kr/html_demo/img/main/MainBn_scroll_02.png"
-            alt="자격증 따기전에 알아둬야 할 것, 내게 꼭 필요한 자격증따기"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://janet.co.kr/html_demo/img/main/MainBn_scroll_03.png"
-            alt="가장 따기 쉬운 자격증"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://janet.co.kr/html_demo/img/main/MainBn_scroll_04.png"
-            alt="시험 없이 취득가능한 자격증"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://janet.co.kr/html_demo/img/main/MainBn_scroll_05.png"
-            alt="월 300이상 버는 자격증이 있다?"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://janet.co.kr/html_demo/img/main/MainBn_scroll_06.png"
-            alt="한 달만에 취득 가능한 자격증 BEST"
-          />
-        </SwiperSlide>
+        {swiperJson.map((v, i) => (
+          <SwiperSlide key={i}>
+            <img src={v.src} alt={v.alt} />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </MainBanner>
   );
